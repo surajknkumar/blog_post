@@ -1,8 +1,14 @@
-/** @format */
+/**
+ * @format
+ * @author suraj kumar
+ * @email surajknkumar@gmail.com
+ * @Owner Sumitra - only for interview purpose
+ */
+
 import React, {useEffect, useState} from 'react';
 import {Link, useParams} from 'react-router-dom';
 import LoaderComponent from './_loader';
-import moment from '../../../../Back-End/node_modules/moment';
+import moment from 'moment';
 const ShowComponent = () => {
   const [article, setArticle] = useState('');
   const {id} = useParams();
@@ -24,7 +30,7 @@ const ShowComponent = () => {
         <div className="text-muted mb-2">
           {moment(article.createdAt).format('MMMM Do YYYY, h:mm:ss a')}
         </div>
-        <Link to="/" className="btn btn-secondary">
+        <Link to="/" className="btn btn-secondary mr-2">
           All Articles
         </Link>
         <Link
@@ -32,7 +38,7 @@ const ShowComponent = () => {
             pathname: '/Edit',
             state: article,
           }}
-          className="btn btn-secondary"
+          className="btn btn-secondary "
           params={article}>
           Edit
         </Link>

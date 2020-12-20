@@ -1,9 +1,14 @@
-/** @format */
+/**
+ * @format
+ * @author suraj kumar
+ * @email surajknkumar@gmail.com
+ * @Owner Sumitra - only for interview purpose
+ */
 
 import React, {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
 import LoaderComponent from './articles/_loader';
-import moment from '../../../Back-End/node_modules/moment';
+import moment from 'moment';
 const HomeComponent = () => {
   const [articles, setArticles] = useState();
   useEffect(() => {
@@ -52,7 +57,7 @@ const HomeComponent = () => {
                   <h5>{article.sortDetail}</h5>
                 </div>
                 <Link
-                  className="btn btn-primary"
+                  className="btn btn-primary mr-1"
                   to={`articles/${article.slug}`}>
                   Show
                 </Link>
